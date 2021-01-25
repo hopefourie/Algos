@@ -8,9 +8,10 @@ Return the number of sub-arrays of size k and average greater than or equal to t
 */
 
 var numOfSubarrays = function (arr, k, threshold) {
-  let sum = arr.slice(0, k).reduce((el, accum) => {
-    return accum + el;
-  }, 0);
+  let sum = 0;
+  for (let j = 0; j < k; j++) {
+    sum += arr[j];
+  }
   let count = 0;
   if (sum >= threshold * k) count++;
   let start = 0;
