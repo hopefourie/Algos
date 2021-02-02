@@ -1,4 +1,4 @@
-//Write a data structure that mimics a trie
+//Implement a Trie data structure
 
 function Node() {
   this.keys = new Map();
